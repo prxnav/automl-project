@@ -16,7 +16,7 @@ def main() -> None:
     p.add_argument("--budget", type=float, default=1.0, help="hours")
     p.add_argument("--seeds", type=int, default=3)
     p.add_argument("--out", type=Path, default=Path("results/baselines"))
-    args = p.parse_args()
+    p.parse_args()
     raise NotImplementedError("Task A6/B6")
 
 

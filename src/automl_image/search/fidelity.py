@@ -16,5 +16,5 @@ class FidelitySchedule:
     eta: int = 3
 
 
-def build_schedule(meta: MetaFeatures, budget: "BudgetGuard") -> FidelitySchedule:
+def build_schedule(meta: MetaFeatures, budget: BudgetGuard) -> FidelitySchedule:
     raise NotImplementedError

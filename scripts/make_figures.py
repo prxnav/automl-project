@@ -16,7 +16,7 @@ def main() -> None:
     p.add_argument("--out", type=Path, default=Path("results/figures"))
     p.add_argument("--figures", nargs="*", default=None,
                    help="subset like F1 F3; default all")
-    args = p.parse_args()
+    p.parse_args()
     raise NotImplementedError("Task C8 (Member C)")
 
 

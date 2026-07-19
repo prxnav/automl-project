@@ -24,7 +24,7 @@ def hypervolume(front: np.ndarray, reference: tuple[float, float]) -> float:
 
 def hypervolume_over_time(
     results: list[RunResult], reference: tuple[float, float]
-) -> "pd.DataFrame":
+) -> pd.DataFrame:
     raise NotImplementedError
 
 

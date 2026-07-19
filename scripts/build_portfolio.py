@@ -16,7 +16,7 @@ def main() -> None:
     p.add_argument("--out", type=Path, default=Path("results/offline_benchmark"))
     p.add_argument("--seeds", type=int, default=2)
     p.add_argument("--dry-run", action="store_true")
-    args = p.parse_args()
+    p.parse_args()
     raise NotImplementedError("Task C4 (Member C)")
 
 

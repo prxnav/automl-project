@@ -14,13 +14,13 @@ def build_space(
     *,
     backbones: list[str] | None = None,
     vram_gb: float = 6.0,
-) -> "ConfigurationSpace":
+) -> ConfigurationSpace:
     raise NotImplementedError
 
 
-def config_from_configuration(c: "Configuration", seed: int = 0) -> TrainConfig:
+def config_from_configuration(c: Configuration, seed: int = 0) -> TrainConfig:
     raise NotImplementedError
 
 
-def configuration_from_config(c: TrainConfig, space: "ConfigurationSpace") -> "Configuration":
+def configuration_from_config(c: TrainConfig, space: ConfigurationSpace) -> Configuration:
     raise NotImplementedError

@@ -18,7 +18,7 @@ def main() -> None:
     p.add_argument("--dataset", type=Path, required=True, help="dataset root directory")
     p.add_argument("--out", type=Path, default=Path("results/train_config"))
     p.add_argument("--seed", type=int, default=0)
-    args = p.parse_args()
+    p.parse_args()
     raise NotImplementedError("Task A6 (Member A)")
 
 

@@ -23,11 +23,11 @@ class RunStore:
     def log_epoch(self, run_id: str, rec: EpochRecord) -> None:
         raise NotImplementedError
 
-    def load(self, **filters) -> "pd.DataFrame":
+    def load(self, **filters) -> pd.DataFrame:
         raise NotImplementedError
 
-    def learning_curves(self, **filters) -> "pd.DataFrame":
+    def learning_curves(self, **filters) -> pd.DataFrame:
         raise NotImplementedError
 
-    def ledger(self) -> "pd.DataFrame":
+    def ledger(self) -> pd.DataFrame:
         raise NotImplementedError

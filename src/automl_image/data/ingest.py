@@ -20,5 +20,5 @@ def build_dataloaders(
     split_indices,
     *,
     num_workers: int | None = None,
-) -> "tuple[DataLoader, DataLoader]":
+) -> tuple[DataLoader, DataLoader]:
     raise NotImplementedError

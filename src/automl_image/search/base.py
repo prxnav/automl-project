@@ -1,7 +1,8 @@
 from __future__ import annotations
 
+from collections.abc import Callable
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, Protocol
+from typing import TYPE_CHECKING, Protocol
 
 from automl_image.runstore import RunStore
 from automl_image.search.fidelity import FidelitySchedule
@@ -18,13 +19,13 @@ class Searcher(Protocol):
     def run(
         self,
         evaluate: Callable[[TrainConfig, Fidelity], RunResult],
-        space: "ConfigurationSpace",
+        space: ConfigurationSpace,
         schedule: FidelitySchedule,
-        budget: "BudgetGuard",
+        budget: BudgetGuard,
         *,
         initial_design: list[TrainConfig] | None = None,
         warm_start_data: list[RunResult] | None = None,
-        lc_pruner: "LCPruner | None" = None,
+        lc_pruner: LCPruner | None = None,
         store: RunStore,
     ) -> list[RunResult]: ...
 

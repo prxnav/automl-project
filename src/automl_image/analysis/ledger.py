@@ -9,9 +9,9 @@ if TYPE_CHECKING:
     import pandas as pd
 
 
-def build_ledger(store: RunStore) -> "pd.DataFrame":
+def build_ledger(store: RunStore) -> pd.DataFrame:
     raise NotImplementedError
 
 
-def budget_report(run_dir: Path) -> "pd.DataFrame":
+def budget_report(run_dir: Path) -> pd.DataFrame:
     raise NotImplementedError

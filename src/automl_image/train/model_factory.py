@@ -8,9 +8,9 @@ if TYPE_CHECKING:
     from torch import nn
 
 
-def build_model(config: TrainConfig, n_classes: int) -> "nn.Module":
+def build_model(config: TrainConfig, n_classes: int) -> nn.Module:
     raise NotImplementedError
 
 
-def build_param_groups(model: "nn.Module", config: TrainConfig) -> list[dict]:
+def build_param_groups(model: nn.Module, config: TrainConfig) -> list[dict]:
     raise NotImplementedError

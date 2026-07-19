@@ -18,7 +18,7 @@ def retrain_full(
 
 
 def soft_vote(
-    checkpoints: list[Path], loader: "DataLoader", *, tta: bool = True, tta_views: int = 4
+    checkpoints: list[Path], loader: DataLoader, *, tta: bool = True, tta_views: int = 4
 ) -> np.ndarray:
     raise NotImplementedError
 

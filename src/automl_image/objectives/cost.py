@@ -8,16 +8,16 @@ if TYPE_CHECKING:
     from torch import nn
 
 
-def n_params(model: "nn.Module") -> int:
+def n_params(model: nn.Module) -> int:
     raise NotImplementedError
 
 
-def flops_g(model: "nn.Module", resolution: int) -> float:
+def flops_g(model: nn.Module, resolution: int) -> float:
     raise NotImplementedError
 
 
 def measure_latency_ms(
-    model: "nn.Module",
+    model: nn.Module,
     resolution: int,
     *,
     device: str,

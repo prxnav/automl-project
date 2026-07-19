@@ -10,5 +10,5 @@ if TYPE_CHECKING:
 
 def ablation_path(
     default: TrainConfig, incumbent: TrainConfig, evaluate
-) -> "pd.DataFrame":
+) -> pd.DataFrame:
     raise NotImplementedError

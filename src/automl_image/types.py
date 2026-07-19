@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Literal, Optional
+from typing import Any, Literal
 
 Split = Literal["train", "val", "test"]
 
@@ -83,11 +83,11 @@ class TrainConfig:
     seed: int = 0
 
     @classmethod
-    def default(cls) -> "TrainConfig":
+    def default(cls) -> TrainConfig:
         raise NotImplementedError
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "TrainConfig":
+    def from_dict(cls, d: dict[str, Any]) -> TrainConfig:
         raise NotImplementedError
 
     def to_dict(self) -> dict[str, Any]:
@@ -119,12 +119,12 @@ class RunResult:
     learning_curve: list[EpochRecord]
     n_params: int
     flops_g: float
-    latency_ms: Optional[float]
+    latency_ms: float | None
     wallclock_seconds: float
     gpu_seconds: float
     peak_vram_mb: float
     device: str
     status: Literal["ok", "oom", "diverged", "timeout", "early_stopped", "error"]
-    error: Optional[str] = None
-    checkpoint_path: Optional[Path] = None
+    error: str | None = None
+    checkpoint_path: Path | None = None
     run_id: str = ""

@@ -10,7 +10,7 @@ if TYPE_CHECKING:
 
 def get_initial_design(
     meta: MetaFeatures,
-    space: "ConfigurationSpace",
+    space: ConfigurationSpace,
     *,
     k: int = 8,
     exclude_dataset: str | None = None,

@@ -6,5 +6,5 @@ if TYPE_CHECKING:
     import pandas as pd
 
 
-def fanova_importance(runs: "pd.DataFrame", *, dataset: str) -> "pd.DataFrame":
+def fanova_importance(runs: pd.DataFrame, *, dataset: str) -> pd.DataFrame:
     raise NotImplementedError

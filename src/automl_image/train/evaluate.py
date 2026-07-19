@@ -7,5 +7,5 @@ if TYPE_CHECKING:
     from torch.utils.data import DataLoader
 
 
-def evaluate(model: "nn.Module", loader: "DataLoader", *, device: str) -> tuple[float, float, float]:
+def evaluate(model: nn.Module, loader: DataLoader, *, device: str) -> tuple[float, float, float]:
     raise NotImplementedError

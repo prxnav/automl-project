@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 
 
 def choose(
-    front: "pd.DataFrame",
+    front: pd.DataFrame,
     *,
     rule: str = "knee",
     constraint: dict | None = None,

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Callable
+from collections.abc import Callable
+from typing import TYPE_CHECKING
 
 from automl_image.types import DatasetSpec, Fidelity, TrainConfig
 
@@ -10,7 +11,7 @@ if TYPE_CHECKING:
 
 def build_transforms(
     config: TrainConfig, fidelity: Fidelity, spec: DatasetSpec
-) -> "tuple[Compose, Compose]":
+) -> tuple[Compose, Compose]:
     raise NotImplementedError
 
 

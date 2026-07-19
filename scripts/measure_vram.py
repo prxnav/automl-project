@@ -13,7 +13,7 @@ def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--machine", required=True, help="key used in configs/vram_table.yaml")
     p.add_argument("--out", default="configs/vram_table.yaml")
-    args = p.parse_args()
+    p.parse_args()
     raise NotImplementedError("Task B1 (Member B)")
 
 
