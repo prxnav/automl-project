@@ -1,0 +1,9 @@
+name: fashion
+root: data/fashion
+n_classes: 10
+n_train: 60000
+n_test: 10000
+channels: 1
+native_resolution: [28, 28]
+reference_accuracy: 0.88
+imbalanced: false

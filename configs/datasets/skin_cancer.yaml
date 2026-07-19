@@ -1,0 +1,9 @@
+name: skin_cancer
+root: data/skin_cancer
+n_classes: 7
+n_train: 7010
+n_test: 3005
+channels: 3
+native_resolution: [450, 450]
+reference_accuracy: 0.71
+imbalanced: true

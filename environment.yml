@@ -1,0 +1,23 @@
+name: automl-image
+channels: [pytorch, nvidia, conda-forge]
+dependencies:
+  - python=3.11
+  - pytorch=2.4.*
+  - torchvision=0.19.*
+  - pip
+  - pip:
+      - timm==1.0.9
+      - smac==2.2.0
+      - ConfigSpace==1.2.0
+      - optuna==4.0.0
+      - scipy==1.14.*
+      - pandas==2.2.*
+      - pyarrow==17.*
+      - scikit-learn==1.5.*
+      - matplotlib==3.9.*
+      - seaborn==0.13.*
+      - fvcore==0.1.5.post20221221
+      - pyyaml==6.0.*
+      - rich==13.*
+      - pytest==8.*
+      - ruff==0.6.*

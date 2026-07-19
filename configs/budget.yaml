@@ -1,0 +1,12 @@
+total_hours: 24.0
+stages:
+  ingest_and_metafeatures_hours: 0.25
+  search_hours: 18.5
+  analysis_hours: 0.5
+  safety_margin_hours: 3.5
+fidelity:
+  dimension: epochs
+  eta: 3
+  rungs_epochs: [1, 3, 9, 27]
+  rungs_resolution: [96, 128, 160, 224]
+  data_subset_fallback_threshold_images: 100000

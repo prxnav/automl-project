@@ -1,0 +1,9 @@
+name: emotions
+root: data/emotions
+n_classes: 7
+n_train: 28709
+n_test: 7178
+channels: 1
+native_resolution: [48, 48]
+reference_accuracy: 0.40
+imbalanced: false

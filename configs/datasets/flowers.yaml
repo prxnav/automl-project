@@ -1,0 +1,9 @@
+name: flowers
+root: data/flowers
+n_classes: 102
+n_train: 5732
+n_test: 2457
+channels: 3
+native_resolution: [512, 512]
+reference_accuracy: 0.55
+imbalanced: true

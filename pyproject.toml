@@ -3,11 +3,19 @@ name = "automl"
 license = { file = "LICENSE" }
 # Feel free to change from here
 version = "0.1.0"
-dependencies = ["torchvision", "pandas", "scikit-learn", "numpy<2.0", "IPython"]
+dependencies = [
+  "torchvision",
+  "pandas",
+  "scikit-learn",
+  "numpy<2.0",
+  "IPython",
+  "pyarrow",
+  "pyyaml",
+]
 requires-python = ">=3.10"
-authors = [{ name = "user", email = "user@user.com" }]
+authors = [{ name = "automl_psk (Karan, Sridhar, Menon)" }]
 readme = "README.md"
-description = "AutoML SS26 Exam - Vision"
+description = "AutoML SS26 Exam - Vision — team automl_psk"
 classifiers = [
   'Intended Audience :: Science/Research',
   'Intended Audience :: Developers',
@@ -20,3 +28,33 @@ classifiers = [
   'Operating System :: MacOS',
   'Programming Language :: Python :: 3',
 ]
+
+[project.optional-dependencies]
+automl = [
+  "timm",
+  "smac",
+  "ConfigSpace",
+  "optuna",
+  "scipy",
+  "matplotlib",
+  "seaborn",
+  "fvcore",
+  "rich",
+]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

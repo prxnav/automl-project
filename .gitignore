@@ -167,3 +167,13 @@ data/*
 
 # Whiteboard Test Predictions:
 !data/exam_dataset/
+
+results/**
+!results/**/
+!results/figures/**
+!results/**/ledger.csv
+!results/**/.gitkeep
+.env.local
+*.pt
+*.ckpt
+*.pth
